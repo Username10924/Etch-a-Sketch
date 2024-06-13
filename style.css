@@ -14,8 +14,8 @@ body{
     overflow: hidden;
 }
 #container{
-    width: 1024px;
-    height: 1024px;
+    width: 1026px;
+    height: 1026px;
     background-color: cyan;
     display: flex;
     flex-wrap: wrap;
