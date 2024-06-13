@@ -1,9 +1,20 @@
 const container = document.querySelector("#container");
 let sizeBtn = document.querySelector("#sizeBtn");
 let sizeTxt = document.querySelector("#sizeTxt");
-let size;
+let size = 10;
 let grid;
-let oldSize = 0;
+let oldSize;
+
+// Initialize sketchpad
+grid = new Array(size*size);
+for(let i = 0; i < size*size; i++){
+    grid[i] = document.createElement("div");
+    grid[i].classList.add("grid");
+    grid[i].style.width = `${1024 / size}px`;
+    grid[i].style.height = `${1024 / size}px`;
+    container.appendChild(grid[i]);
+}
+
 sizeBtn.addEventListener("click", () => {
     if(sizeTxt.value <= 100){
         oldSize = size;
